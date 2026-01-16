@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pusat Data Surat Desa Muyub Ulu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2 style="text-align:center;">PUSAT DATA SURAT DESA MUYUB ULU</h2>
+  <p style="text-align:center;">Form pencatatan dan pengarsipan surat keluar desa</p>
+
+  <form>
+    <label>Nomor Surat Keluar</label><br>
+    <input type="text" placeholder="Contoh: 140/15/DS-MU/I/2026" required><br><br>
+
+    <label>Tanggal Surat</label><br>
+    <input type="date" required><br><br>
+
+    <label>Kode Desa</label><br>
+    <input type="text" placeholder="Contoh: MU-01" required><br><br>
+
+    <label>Tujuan Surat</label><br>
+    <input type="text" placeholder="Contoh: Kecamatan / Instansi / Nama Tujuan" required><br><br>
+
+    <label>Perihal Surat</label><br>
+    <input type="text" placeholder="Contoh: Permohonan Data Penduduk" required><br><br>
+
+    <label>Dibuat Oleh</label><br>
+    <input type="text" placeholder="Nama perangkat desa" required><br><br>
+
+    <label>Upload Foto Surat</label><br>
+    <input type="file" accept="image/*" required><br><br>
+
+    <!-- PESAN SUKSES -->
+    <div id="pesanSukses" style="
+      display:none;
+      margin-bottom:15px;
+      color:#2e7d32;
+      font-weight:bold;
+      text-align:center;
+    ">
+      Data berhasil disimpan.
+    </div>
+
+    <button type="submit">Simpan Data</button>
+  </form>
+
+  <hr style="margin:40px 0;">
+
+  <h3 style="text-align:center;">Daftar Surat Keluar</h3>
+
+  <div class="table-container">
+    <table id="tabelSurat">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nomor Surat</th>
+          <th>Tanggal</th>
+          <th>Kode Desa</th>
+          <th>Tujuan</th>
+          <th>Perihal</th>
+          <th>Dibuat Oleh</th>
+          <th>Berkas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- DATA MASUK DARI JAVASCRIPT -->
+      </tbody>
+    </table>
+  </div>
+
+  <p style="text-align:center; font-size:13px; margin-top:40px;">
+    Website ini milik Desa Muyub Ulu, dibuat oleh Nurliana.
+  </p>
+
+  <script src="script.js"></script>
+</body>
+</html>
