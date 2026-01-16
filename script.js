@@ -2,7 +2,7 @@ const form = document.querySelector("form");
 const pesan = document.getElementById("pesanSukses");
 
 // LINK GOOGLE APPS SCRIPT KAMU
-const URL = "https://script.google.com/macros/s/AKfycbzmD614qLF-6xubZ6kZdQj08oRGzht-QnVrdVylLhAwdu6Z9kNJQNKRVnUW2hmZyUGplA/exec";
+const URL = https://script.google.com/macros/s/AKfycbzKbEYm-h1HcUQxSn6WBg9qEx03LojDJRq978c3Jhh7W0HhV1LBforJPpW-Peiyq-UzPw/exec
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -34,4 +34,5 @@ form.addEventListener("submit", function (e) {
     })
     .catch(() => alert("Koneksi gagal"));
 });
+
 
