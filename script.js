@@ -1,8 +1,8 @@
 const form = document.querySelector("form");
 const pesan = document.getElementById("pesanSukses");
 
-// LINK GOOGLE APPS SCRIPT KAMU
-const URL = https://script.google.com/macros/s/AKfycbzKbEYm-h1HcUQxSn6WBg9qEx03LojDJRq978c3Jhh7W0HhV1LBforJPpW-Peiyq-UzPw/exec
+// 🔗 LINK GOOGLE APPS SCRIPT (WAJIB PAKAI PETIK)
+const URL = "https://script.google.com/macros/s/AKfycbzKbEYm-h1HcUQxSn6WBg9qEx03LojDJRq978c3Jhh7W0HhV1LBforJPpW-Peiyq-UzPw/exec";
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -18,21 +18,26 @@ form.addEventListener("submit", function (e) {
 
   fetch(URL, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(data),
   })
-    .then((res) => res.json())
     .then((res) => {
-      if (res.status === "success") {
+      // ✅ JANGAN res.json()
+      if (res.ok) {
         pesan.style.display = "block";
-        setTimeout(() => (pesan.style.display = "none"), 5000);
+        setTimeout(() => {
+          pesan.style.display = "none";
+        }, 5000);
+
         form.reset();
         form.elements[0].focus();
       } else {
         alert("Gagal menyimpan data");
       }
     })
-    .catch(() => alert("Koneksi gagal"));
+    .catch(() => {
+      alert("Koneksi gagal");
+    });
 });
-
-
